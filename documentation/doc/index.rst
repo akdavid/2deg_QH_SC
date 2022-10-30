@@ -33,9 +33,3 @@ License
 
 See the `license terms <https://github.com/akdavid/2deg_QH-SC/blob/main/LICENCE.rst>`_ 
 for license rights and limitations (MIT).
-
-
-Attribution
------------
-
-Please cite `A. David, J. S. Meyer and M. Houzet (2022) <https://arxiv.org/abs/2201.04602/>`_ if you find this code useful in your research.
