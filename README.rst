@@ -150,9 +150,3 @@ License
 -------
 
 See the `LICENSE <LICENCE.rst>`_ file for license rights and limitations (MIT).
-
-
-Attribution
------------
-
-Please cite `A. David, J. S. Meyer and M. Houzet (2022) <https://arxiv.org/abs/2210.00000/>`_ if you find this code useful in your research.
