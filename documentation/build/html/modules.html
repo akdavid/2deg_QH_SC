@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modules &mdash; 2deg_QH-SC 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Main Scripts" href="main_scripts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 2deg_QH-SC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Installation and Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_scripts.html">Main Scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-modules.functions">functions.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-modules.system">system.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-modules.utils">utils.py</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">2deg_QH-SC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline"></a></h1>
+<p>The different modules are described in this section.</p>
+<section id="module-modules.functions">
+<span id="functions-py"></span><h2>functions.py<a class="headerlink" href="#module-modules.functions" title="Permalink to this headline"></a></h2>
+<p>Definition of the functions required for the calculations.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.U">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">U</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.U" title="Permalink to this definition"></a></dt>
+<dd><p>Definition of the parabolic cylinder function U(n, z) as defined in Abramowitz &amp; Stegun book.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>float</em>) – First argument of the parabolic cylinder function.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – Second argument of the parabolic cylinder function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the parabolic cylinder function U(n, z).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.U_m">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">U_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.U_m" title="Permalink to this definition"></a></dt>
+<dd><p>Hole-like solution in QH region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – Cyclotron frequency.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the parabolic cylinder function associated to holes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.U_p">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">U_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.U_p" title="Permalink to this definition"></a></dt>
+<dd><p>Electron-like solution in QH region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – Cyclotron frequency.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the parabolic cylinder function associated to electrons.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.chi_m">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">chi_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.chi_m" title="Permalink to this definition"></a></dt>
+<dd><p>Hole-like wave function in QH region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of hole-like wave function in QH region.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.chi_p">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">chi_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.chi_p" title="Permalink to this definition"></a></dt>
+<dd><p>Electron-like wave function in QH region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of electron-like wave function in QH region.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.effective_tau">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">effective_tau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi_b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.effective_tau" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the effective conversion probability at a QH-SS corner.</p>
+<p>The value tau_0 is the one obtained from the microscopic model while the parameters
+labelled with ‘_b’ correspond to the effective barrier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tau_0</strong> (<em>str</em>) – Hole probability computed with the microscopic model.</p></li>
+<li><p><strong>L_b</strong> (<em>str</em>) – Length of the barrier.</p></li>
+<li><p><strong>v_b</strong> (<em>str</em>) – Velocity in the barrier.</p></li>
+<li><p><strong>mu_b</strong> (<em>str</em>) – Chemical potential in the barrier.</p></li>
+<li><p><strong>delta_b</strong> (<em>str</em>) – Superconducting gap of the barrier.</p></li>
+<li><p><strong>phi_b</strong> (<em>str</em>) – Superconducting phase of the barrier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.fermi_momenta">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">fermi_momenta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_barrier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.fermi_momenta" title="Permalink to this definition"></a></dt>
+<dd><p>Positive momentum solutions of the secular equation f(E, k) = 0 at the Fermi level (i.e. at E = 0).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>m_sc</strong> (<em>float</em>) – Effective mass in the SC region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+<li><p><strong>V_barrier</strong> (<em>float</em>) – Height of the delta-potential barrier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The positive solutions of the equation f(E=0, k) = 0.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.hole_probability">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">hole_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_barrier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.hole_probability" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the hole content f_h^+ at the quasi-electron crossing, i.e., at k = -k0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>m_sc</strong> (<em>float</em>) – Effective mass in the SC region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+<li><p><strong>V_barrier</strong> (<em>float</em>) – Height of the delta-potential barrier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Hole probability at the quasi-electron crossing.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.hopping">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">hopping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.hopping" title="Permalink to this definition"></a></dt>
+<dd><p>Define hopping energies in QH and SC regions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site1</strong> – Kwant site.</p></li>
+<li><p><strong>site2</strong> – Kwant site.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Lattice spacing.</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – Hopping energy at zero field.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Hopping energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.hopping_qh">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">hopping_qh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.hopping_qh" title="Permalink to this definition"></a></dt>
+<dd><p>Define hopping energy in QH region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site1</strong> – Kwant site.</p></li>
+<li><p><strong>site2</strong> – Kwant site.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Lattice spacing.</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – Hopping energy at zero field.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Hopping energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.hopping_sc">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">hopping_sc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.hopping_sc" title="Permalink to this definition"></a></dt>
+<dd><p>Define hopping energy in SC region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site1</strong> – Kwant site.</p></li>
+<li><p><strong>site2</strong> – Kwant site.</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – Hopping energy at zero field.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Hopping energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.kronecker_delta">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">kronecker_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.kronecker_delta" title="Permalink to this definition"></a></dt>
+<dd><p>Kronecker delta function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ol class="arabic simple">
+<li><p>if x=0 and 0. otherwise.</p></li>
+</ol>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.onsite">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">onsite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.onsite" title="Permalink to this definition"></a></dt>
+<dd><p>Define onsite energies in QH and SC regions including a delta-potential barrier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site</strong> – Kwant site.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Lattice spacing.</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – Hopping energy at zero field.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+<li><p><strong>Z</strong> (<em>float</em>) – Barrier strength.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Onsite energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.onsite_qh">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">onsite_qh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.onsite_qh" title="Permalink to this definition"></a></dt>
+<dd><p>Define onsite energy in QH region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site</strong> – Kwant site.</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – Hopping energy at zero field.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Onsite energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.onsite_sc">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">onsite_sc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.onsite_sc" title="Permalink to this definition"></a></dt>
+<dd><p>Define onsite energy in SC region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site</strong> – Kwant site.</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – Hopping energy at zero field.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Onsite energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.phi_m">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">phi_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.phi_m" title="Permalink to this definition"></a></dt>
+<dd><p>Hole-like wave function in SC region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_sc</strong> (<em>float</em>) – Effective mass in the SC region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of hole-like wave function in SC region.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.phi_p">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">phi_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.phi_p" title="Permalink to this definition"></a></dt>
+<dd><p>Electron-like wave function in SC region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_sc</strong> (<em>float</em>) – Effective mass in the SC region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of electron-like wave function in SC region.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.secular_equation">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">secular_equation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_barrier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.secular_equation" title="Permalink to this definition"></a></dt>
+<dd><p>Value of f(k, E) used to compute the energy spectrum of the CAES
+and the Fermi momenta by solving the secular equation f(k, E) = 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> (<em>float</em>) – Energy measured from the Fermi level.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Momentum along the QH-SC interface.</p></li>
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>m_sc</strong> (<em>float</em>) – Effective mass in the SC region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – Cyclotron frequency.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+<li><p><strong>V_barrier</strong> (<em>float</em>) – Height of the delta-potential barrier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of f(k, E).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.functions.velocity">
+<span class="sig-prename descclassname"><span class="pre">modules.functions.</span></span><span class="sig-name descname"><span class="pre">velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_barrier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.functions.velocity" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the velocity of the CAES.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_qh</strong> (<em>float</em>) – Effective mass in the QH region.</p></li>
+<li><p><strong>m_sc</strong> (<em>float</em>) – Effective mass in the SC region.</p></li>
+<li><p><strong>mu_qh</strong> (<em>float</em>) – Chemical potential in the QH region.</p></li>
+<li><p><strong>mu_sc</strong> (<em>float</em>) – Chemical potential in the SC region.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Filling factor.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Superconducting gap.</p></li>
+<li><p><strong>V_barrier</strong> (<em>float</em>) – Height of the delta-potential barrier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the velocity.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-modules.system">
+<span id="system-py"></span><h2>system.py<a class="headerlink" href="#module-modules.system" title="Permalink to this headline"></a></h2>
+<p>Classes constructing different Kwant’s systems.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.system.Device">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">modules.system.</span></span><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.Device" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a QH-SC junction with arbitrary QH angles 
+and a rectangle-shaped SC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta_1</strong> (<em>float</em>) – First QH angle (in degrees).</p></li>
+<li><p><strong>theta_2</strong> (<em>float</em>) – Second QH angle (in degrees).</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – System’s parameters.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.system.Device.make_system">
+<span class="sig-name descname"><span class="pre">make_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">onsite</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hopping</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.Device.make_system" title="Permalink to this definition"></a></dt>
+<dd><p>Make the (unfinalized) system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>onsite</strong> (<em>fun</em>) – Onsite energy function.</p></li>
+<li><p><strong>hopping</strong> (<em>fun</em>) – Hopping energy function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Unfinalized Kwant system.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.system.DeviceInfinite">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">modules.system.</span></span><span class="sig-name descname"><span class="pre">DeviceInfinite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.DeviceInfinite" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a an infinite QH-SC interface (lead).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – System’s parameters.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.system.DeviceInfinite.make_system">
+<span class="sig-name descname"><span class="pre">make_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">onsite</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hopping</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.DeviceInfinite.make_system" title="Permalink to this definition"></a></dt>
+<dd><p>Make the (unfinalized) lead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>onsite</strong> (<em>fun</em>) – Onsite energy function.</p></li>
+<li><p><strong>hopping</strong> (<em>fun</em>) – Hopping energy function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Unfinalized Kwant lead.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.system.DeviceSingleCorner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">modules.system.</span></span><span class="sig-name descname"><span class="pre">DeviceSingleCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.DeviceSingleCorner" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a semi-infinite junction with a single corner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta_qh</strong> (<em>float</em>) – QH angle (in degrees).</p></li>
+<li><p><strong>theta_sc</strong> (<em>str</em>) – SC angle (in degrees).</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – System’s parameters.</p></li>
+<li><p><strong>small</strong> (<em>bool</em>) – Must be set to True when small dimensions are used,
+default to False.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.system.DeviceSingleCorner.make_system">
+<span class="sig-name descname"><span class="pre">make_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">onsite</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onsite_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onsite_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hopping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hopping_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hopping_sc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.DeviceSingleCorner.make_system" title="Permalink to this definition"></a></dt>
+<dd><p>Make the (unfinalized) system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>onsite</strong> (<em>fun</em>) – Onsite energy function.</p></li>
+<li><p><strong>hopping</strong> (<em>fun</em>) – Hopping energy function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Unfinalized Kwant system.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-modules.utils">
+<span id="utils-py"></span><h2>utils.py<a class="headerlink" href="#module-modules.utils" title="Permalink to this headline"></a></h2>
+<p>Definitions of the functions used in <em>calculations.py</em>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_corner_transmissions">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_corner_transmissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_corner_transmissions" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the corner transmission amplitudes with Kwant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – The QH-SC corner.</p></li>
+<li><p><strong>energy</strong> (<em>float</em>) – Value of the energy, default to 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The normal and Andreev amplitudes : t_ee, t_he.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_delta_b_and_phi_b">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_delta_b_and_phi_b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_delta_b_and_phi_b" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the effective barrier parameters delta_b and phi_b.</p>
+<p>Here have to give L_b, v_b, and mu_b as inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
+<li><p><strong>L_b</strong> (<em>str</em>) – Length of the barrier.</p></li>
+<li><p><strong>v_b</strong> (<em>str</em>) – Velocity in the barrier.</p></li>
+<li><p><strong>mu_b</strong> (<em>str</em>) – Chemical potential in the barrier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The values of delta_b and phi_b.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_downstream_conductance_TB">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_downstream_conductance_TB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_downstream_conductance_TB" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the (zero-temperature) downstream conductance with Kwant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the downstream conductance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_micro_nu_crit">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_micro_nu_crit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_micro_nu_crit" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the value of nu_crit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of nu_crit.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_micro_nu_crit_limit">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_micro_nu_crit_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_micro_nu_crit_limit" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the asymptotic value of nu_crit.</p>
+<p>Track states can cross the Fermi level if the filling factor is high enough.
+The minimal value of nu for which they cross it is called nu_crit.
+It turns out that nu_crit decreases with the SC gap
+and reaches an asymptotic value as the gap tends to zero.
+This is what we compute here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asymptotic value of nu_crit</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_momentum_difference">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_momentum_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_momentum_difference" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the momentum difference dk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – The energy value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of dk.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_density">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_density" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the probability density <span class="math notranslate nohighlight">\(|u|^2 - |v|^2\)</span> of the incoming electron.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – The device.</p></li>
+<li><p><strong>energy</strong> (<em>float</em>) – Value of the energy (relative to the CAES Fermi level), default to 0.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_device">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_device" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the Kwant system.</p>
+<p>Be carefull, the colors are badly defined for negative angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device</strong> (<em>object</em>) – The device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_downstream_conductance_comparison">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_downstream_conductance_comparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Ls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_downstream_conductance_comparison" title="Permalink to this definition"></a></dt>
+<dd><p>Comparison between analytical and tight-binding conductance.</p>
+<p>The analytical formula is shifted in order to recover the tight-binding simulation at large L.
+We we need to give L_b, v_b, and mu_b as inputs.</p>
+<p>The shifted data and the plot are saved in the directory ‘files/downstream_conductance/comparison’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Ls</strong> (<em>list</em>) – The values of the interface’s length.</p></li>
+<li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
+<li><p><strong>device_1</strong> (<em>object</em>) – The first QH-SC corner.</p></li>
+<li><p><strong>device_2</strong> (<em>object</em>) – The second QH-SC corner.</p></li>
+<li><p><strong>L_b</strong> (<em>str</em>) – Length of the barrier.</p></li>
+<li><p><strong>v_b</strong> (<em>str</em>) – Velocity in the barrier.</p></li>
+<li><p><strong>mu_b</strong> (<em>str</em>) – Chemical potential in the barrier.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using existing data.
+If False the data are computed even if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_fh_p_vs_Z_various_fillings">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_fh_p_vs_Z_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Zs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_fh_p_vs_Z_various_fillings" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the hole content f_h^+ vs Z for various values of the filling factor.</p>
+<p>The plot is saved in the directory ‘files/andreev_and_hole_prob/hole_probability/varying_Z/plots’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nus</strong> (<em>list</em>) – The values of the filling factor.</p></li>
+<li><p><strong>Zs</strong> (<em>list</em>) – The values of the barrier strength.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_finite_T_conductance_TB_vs_L">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_finite_T_conductance_TB_vs_L</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_finite_T_conductance_TB_vs_L" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the finite-temperature downstream conductance versus the energy by using the tight-binding model.</p>
+<p>The data and the plot are saved in the directory
+‘files/finite_temperature/downstream_conductance/varying_L/tight_binding’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
+<li><p><strong>kT</strong> (<em>float</em>) – The thermal energy kB*T.</p></li>
+<li><p><strong>Ls</strong> (<em>list</em>) – The values of the interface’s length.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_finite_T_conductance_TB_vs_L_various_temps">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_finite_T_conductance_TB_vs_L_various_temps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kTs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_finite_T_conductance_TB_vs_L_various_temps" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the finite-temperature downstream conductance versus the energy for various temperatures.</p>
+<p>Here we use a full tight-binding calculation and we compare with the zero-temperature result.</p>
+<p>The data and the plot are saved in the directory
+‘files/finite_temperature/downstream_conductance/varying_L/tight_binding’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
+<li><p><strong>kTs</strong> (<em>list</em>) – The values of kB*T.</p></li>
+<li><p><strong>Ls</strong> (<em>list</em>) – The values of the interface’s length.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_k0_vs_Z_various_fillings">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_k0_vs_Z_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Zs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_k0_vs_Z_various_fillings" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the momentum k0 versus Z for various values of the filling factor.</p>
+<p>The plot is saved in the directory ‘files/momentum_k0/varying_Z/plots’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nus</strong> (<em>list</em>) – The values of the filling factor.</p></li>
+<li><p><strong>Zs</strong> (<em>list</em>) – The values of the barrier strength.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_k0_vs_nu">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_k0_vs_nu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_k0_vs_nu" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the momentum at the Fermi level k0 versus nu.</p>
+<p>The plot is saved in the directory ‘files/momentum_k0/varying_nu/plots’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nus</strong> (<em>list</em>) – The values of the filling factor.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_micro_nu_crit_limit_vs_Z">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_micro_nu_crit_limit_vs_Z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_micro_nu_crit_limit_vs_Z" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the asymptotic value of nu_crit <em>v.s.</em> Z.</p>
+<p>The resulting plot is saved in the ‘files/track_states/nu_crit/varying_Z’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_micro_nu_crit_limit_vs_mismatch">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_micro_nu_crit_limit_vs_mismatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_micro_nu_crit_limit_vs_mismatch" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the asymptotic value of nu_crit <em>v.s.</em> mu_sc/mu_qh.</p>
+<p>The resulting plot is saved in the ‘files/track_states/nu_crit/varying_mismatch’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_micro_nu_crit_vs_mu_qh_delta">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_micro_nu_crit_vs_mu_qh_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_micro_nu_crit_vs_mu_qh_delta" title="Permalink to this definition"></a></dt>
+<dd><p>Plot nu_crit <em>v.s.</em> mu_qh/delta.</p>
+<p>The resulting plot is saved in the ‘files/track_states/nu_crit/varying_mu_qh_delta’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_momentum_difference_vs_energy">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_momentum_difference_vs_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_momentum_difference_vs_energy" title="Permalink to this definition"></a></dt>
+<dd><p>Plot momentum difference <em>v.s.</em> energy.</p>
+<p>The resulting plot is saved in the ‘files/finite_temperature/momentum_difference/varying_energy’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_spectrum_TB">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_spectrum_TB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_spectrum_TB" title="Permalink to this definition"></a></dt>
+<dd><p>Plot tight-binding spectrum.</p>
+<p>The data and plots are saved in the directory ‘files/energy_spectrum/tight_binding’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – Infinite QH-SC interface.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If true the spectrum is plotted using the existing data.
+If False the data are computed even if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_spectrum_comparison">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_spectrum_comparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_spectrum_comparison" title="Permalink to this definition"></a></dt>
+<dd><p>Comparison between microscopic and tight-binding spectrums.</p>
+<p>The plots are saved in the directory ‘files/energy_spectrum/comparison/plots’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – Infinite QH-SC interface.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If true the spectrum is plotted using the existing data.
+If False the data are computed even if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_spectrum_micro">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_spectrum_micro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_k0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_spectrum_micro" title="Permalink to this definition"></a></dt>
+<dd><p>Plot microscopic spectrum.</p>
+<p>The data and plots are saved in the directory ‘files/energy_spectrum/microscopic’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If true the spectrum is plotted using the existing data.
+If False the data are computed even if they exist.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_tau_vs_energy">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_energy" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the conversion probabilty tau vs energy.</p>
+<p>The data and the plot are saved in the directory
+‘files/finite_temperature/scattering_probabilities/transmissions/’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_tau_vs_theta_qh_various_fillings">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_theta_qh_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_theta_qh_various_fillings" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the corner’s Andreev transmission versus the QH angle for various values of the filling factor.</p>
+<p>The data and the plot are saved in the directory 
+‘files/andreev_and_hole_prob/andreev_transmission/varying_theta’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nus</strong> (<em>list</em>) – The values of the filling factor.</p></li>
+<li><p><strong>thetas</strong> (<em>list</em>) – The values of the QH angle.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the stored data.
+If False the data are computed even if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_tau_vs_theta_sc_various_fillings">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_theta_sc_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_theta_sc_various_fillings" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the corner’s Andreev transmission versus the SC angle for various values of the filling factor.</p>
+<p>The data and the plot are saved in the directory 
+‘files/andreev_and_hole_prob/andreev_transmission/varying_theta_sc’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nus</strong> (<em>list</em>) – The values of the filling factor.</p></li>
+<li><p><strong>thetas</strong> (<em>list</em>) – The values of the SC angle.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the stored data.
+If False the data are computed even if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main_scripts.html" class="btn btn-neutral float-left" title="Main Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A. David, J. S. Meyer, M. Houzet.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Scripts &mdash; 2deg_QH-SC 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Installation and Usage" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 2deg_QH-SC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Installation and Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Main Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-calculations">calculations.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-manuscript_figures">manuscript_figures.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">2deg_QH-SC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Main Scripts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/main_scripts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="main-scripts">
+<h1>Main Scripts<a class="headerlink" href="#main-scripts" title="Permalink to this headline"></a></h1>
+<p>The scripts present in the <cite>main_code</cite> directory are described in this section.</p>
+<section id="module-calculations">
+<span id="calculations-py"></span><h2>calculations.py<a class="headerlink" href="#module-calculations" title="Permalink to this headline"></a></h2>
+<p>Calculations.</p>
+<p>This script contains different sections, each of which 
+generates the data and the plot of a calculation. Comment the quotation
+marks by using hashtags to run the calculations.</p>
+<p>Contents:</p>
+<ul class="simple">
+<li><p>Visualization</p>
+<ul>
+<li><p>Kwant system</p></li>
+<li><p>Density u^2 - v^2</p></li>
+</ul>
+</li>
+<li><p>Energy Spectrum</p>
+<ul>
+<li><p>Tight-binding spectrum</p></li>
+<li><p>Microscopic spectrum</p></li>
+<li><p>Spectrum comparison</p></li>
+</ul>
+</li>
+<li><p>Momentum at the Fermi level k0</p>
+<ul>
+<li><p>k0 <em>v.s.</em> nu</p></li>
+<li><p>k0 <em>v.s.</em> Z at various fillings</p></li>
+</ul>
+</li>
+<li><p>Andreev Transmission and Hole Probability</p>
+<ul>
+<li><p>tau <em>v.s.</em> theta_qh at various fillings</p></li>
+<li><p>tau <em>v.s.</em> theta_sc at various fillings</p></li>
+<li><p>fh_p <em>v.s.</em> Z at various fillings</p></li>
+</ul>
+</li>
+<li><p>Downstream conductance</p>
+<ul>
+<li><p>Conductance comparison</p></li>
+</ul>
+</li>
+<li><p>Track states</p>
+<ul>
+<li><p>nu_crit <em>v.s.</em> mu_qh/delta</p></li>
+<li><p>Asymptotic nu_crit <em>v.s.</em> mu_sc/mu_qh</p></li>
+<li><p>Asymptotic nu_crit <em>v.s.</em> Z</p></li>
+</ul>
+</li>
+<li><p>Finite-temperature</p>
+<ul>
+<li><p>Momentum difference <em>v.s.</em> energy</p></li>
+<li><p>tau <em>v.s.</em> energy</p></li>
+<li><p>Finite-temperature tight-binding conductance <em>v.s.</em> L</p></li>
+<li><p>Finite-temperature tight-binding conductance <em>v.s.</em> L at various temperatures</p></li>
+</ul>
+</li>
+</ul>
+<p>The resulting data and plots are saved in the ‘files‘ directory.</p>
+</section>
+<section id="module-manuscript_figures">
+<span id="manuscript-figures-py"></span><h2>manuscript_figures.py<a class="headerlink" href="#module-manuscript_figures" title="Permalink to this headline"></a></h2>
+<p>This script generates the figures as used in the manuscript.</p>
+<p>The resulting plots are saved in the ‘figures‘ directory.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Installation and Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A. David, J. S. Meyer, M. Houzet.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+name: 2deg_QH-SC
+channels:
+    - conda-forge
+    - travis
+dependencies:
+    - python=3.7
+    - kwant=1.4
+    - joblib
+    - pip
+    - sphinx
+    - sphinx_rtd_theme
+    - pip:
+      - alive_progress
+      - kwantspectrum

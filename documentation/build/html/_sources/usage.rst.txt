@@ -1,0 +1,127 @@
+
+Installation and Usage
+----------------------
+
+Here we explain how to run the scripts. 
+After following the steps below try to run some calculations 
+with the script *calculations.py* or reproduce the manuscript 
+figures with the script *manuscript_figures.py*. 
+
+
+
+Miniconda, GitHub repository and conda environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install `miniconda <http://conda.pydata.org/miniconda.html/>`_
+, clone the `repository <https://github.com/akdavid/2deg_QH-SC/>`_
+and ``cd`` into the root directory *2deg_QH-SC-main* after unzipping.
+Then create the Conda environment that contains all dependencies with ::
+
+   conda env create -f environment.yml
+
+
+You can now use this environment to run the scripts.
+Below is detailed how to run the scripts using the command line,
+Pycharm or Visual Studio Code.
+
+
+Running the scripts by using the command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To run a script from the terminal use the following command line: ::
+
+   <path_to_python_exe> <path_to_python_script>
+
+The python executable  should be located at :
+
+      ~/opt/miniconda3/envs/2deg_QH-SC/bin/python (macOS)
+
+      ~/miniconda3/envs/2deg_QH-SC/bin/python (Linux)
+
+      ~/miniconda3/envs/2deg_QH-SC/python (Windows)
+
+For example, if you are on macOS and you want to run the script
+*calculations.py* (while being in the root directory of the repo), use ::
+
+    ~/opt/miniconda3/envs/2deg_QH-SC/bin/python calculations.py
+
+
+.. NOTE::
+
+   You can use a global shell variable to create a shortcut to the Python executable path.
+   For that, open a terminal and modify the bash configuration file located in your 
+   HOME directory (the directory in which you are when you open the terminal)
+   (.bashrc, .bash_profile, or .profile). For example on macOS ::
+ 
+       nano .bash_profile
+
+   Add the following in the file ::
+   
+       export mypython=~/opt/miniconda3/envs/2deg_QH-SC/bin/python
+
+   and save it with ``Ctrl+X`` and ``Y`` and ``Enter``. 
+   Then close the terminal and open a new one to make the modification effective. 
+   You can now use the variable ``$mypython``
+   for the path such that the above example reads ::
+   
+       $mypython calculations.py
+
+
+Running the scripts by using PyCharm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With `PyCharm <https://www.jetbrains.com/pycharm/download/>`_ you can follow these steps :
+
+1. Launch PyCharm and choose ``Create New Project`` 
+2. **Locate the project** at the root directory *2deg_QH-SC-main*.
+3. Mark ``Existing interpreter`` (or ``Previously configured interpreter``)
+   and click on the selection icon ``...``
+4. Select ``Conda Environment`` and choose the location of the python executable.
+   It should be located at :
+
+      ~/opt/miniconda3/envs/2deg_QH-SC/bin/python (macOS)
+
+      ~/miniconda3/envs/2deg_QH-SC/bin/python (Linux)
+
+      ~/miniconda3/envs/2deg_QH-SC/python (Windows)
+
+5. Click on ``Ok`` then on ``Create`` and select ``Create from existing sources``
+6. You are ready to run the scripts!
+7. (Optional) You can see progress bars during the calculations by activating the
+   ``Emulate terminal in output console`` option. For that, got to ``Run->Edit Configurations``
+   and check the option.
+
+
+
+Running the scripts by using Visual Studio Code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With `Visual Studio Code <https://code.visualstudio.com/download/>`_ you can follow these steps :
+
+1. Launch Visual Studio Code and install the *Python* extension if it's not done yet.
+2. From the main page choose ``Open...`` , select the root directory *2deg_QH-SC-main*, and click on
+   ``Yes, I trust the authors``
+3. Open the *Command Palette* with ``Ctrl+Shift+P``, search
+   ``Python: Select Interpreter`` and choose the one associated to the '2deg_QH-SC'
+   environment.
+4. You are ready to run the scripts!
+
+
+
+Updating the documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The *documentation* directory contains a ``pdf`` and a local ``html`` version of the documentation.
+They can respectively be found at *documentation/build/latex/2deg_qh-sc.pdf*
+and *documentation/build/html/index.html*. You can update them by using ::
+
+   conda activate 2deg_QH-SC
+   cd documentation
+   make html
+   make latexpdf
+
+
+.. NOTE::
+
+   When you compile the documentation it runs the python scripts so make sure
+   the calculations are commented before using ``make html`` or ``make latexpdf``.

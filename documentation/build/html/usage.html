@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation and Usage &mdash; 2deg_QH-SC 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Main Scripts" href="main_scripts.html" />
+    <link rel="prev" title="Welcome to 2deg QH-SC’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 2deg_QH-SC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#miniconda-github-repository-and-conda-environment">Miniconda, GitHub repository and conda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-scripts-by-using-the-command-line">Running the scripts by using the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-scripts-by-using-pycharm">Running the scripts by using PyCharm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-scripts-by-using-visual-studio-code">Running the scripts by using Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-the-documentation">Updating the documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main_scripts.html">Main Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">2deg_QH-SC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installation and Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-and-usage">
+<h1>Installation and Usage<a class="headerlink" href="#installation-and-usage" title="Permalink to this headline"></a></h1>
+<p>Here we explain how to run the scripts.
+After following the steps below try to run some calculations
+with the script <em>calculations.py</em> or reproduce the manuscript
+figures with the script <em>manuscript_figures.py</em>.</p>
+<section id="miniconda-github-repository-and-conda-environment">
+<h2>Miniconda, GitHub repository and conda environment<a class="headerlink" href="#miniconda-github-repository-and-conda-environment" title="Permalink to this headline"></a></h2>
+<p>Install <a class="reference external" href="http://conda.pydata.org/miniconda.html/">miniconda</a>
+, clone the <a class="reference external" href="https://github.com/akdavid/2deg_QH-SC/">repository</a>
+and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the root directory <em>2deg_QH-SC-main</em> after unzipping.
+Then create the Conda environment that contains all dependencies with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>You can now use this environment to run the scripts.
+Below is detailed how to run the scripts using the command line,
+Pycharm or Visual Studio Code.</p>
+</section>
+<section id="running-the-scripts-by-using-the-command-line">
+<h2>Running the scripts by using the command line<a class="headerlink" href="#running-the-scripts-by-using-the-command-line" title="Permalink to this headline"></a></h2>
+<p>To run a script from the terminal use the following command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">path_to_python_exe</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path_to_python_script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The python executable  should be located at :</p>
+<blockquote>
+<div><p>~/opt/miniconda3/envs/2deg_QH-SC/bin/python (macOS)</p>
+<p>~/miniconda3/envs/2deg_QH-SC/bin/python (Linux)</p>
+<p>~/miniconda3/envs/2deg_QH-SC/python (Windows)</p>
+</div></blockquote>
+<p>For example, if you are on macOS and you want to run the script
+<em>calculations.py</em> (while being in the root directory of the repo), use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">opt</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="mi">2</span><span class="n">deg_QH</span><span class="o">-</span><span class="n">SC</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span> <span class="n">calculations</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use a global shell variable to create a shortcut to the Python executable path.
+For that, open a terminal and modify the bash configuration file located in your
+HOME directory (the directory in which you are when you open the terminal)
+(.bashrc, .bash_profile, or .profile). For example on macOS</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">.</span><span class="n">bash_profile</span>
+</pre></div>
+</div>
+<p>Add the following in the file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">mypython</span><span class="o">=~/</span><span class="n">opt</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="mi">2</span><span class="n">deg_QH</span><span class="o">-</span><span class="n">SC</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
+</div>
+<p>and save it with <code class="docutils literal notranslate"><span class="pre">Ctrl+X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> and <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.
+Then close the terminal and open a new one to make the modification effective.
+You can now use the variable <code class="docutils literal notranslate"><span class="pre">$mypython</span></code>
+for the path such that the above example reads</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$mypython calculations.py
+</pre></div>
+</div>
+</div>
+</section>
+<section id="running-the-scripts-by-using-pycharm">
+<h2>Running the scripts by using PyCharm<a class="headerlink" href="#running-the-scripts-by-using-pycharm" title="Permalink to this headline"></a></h2>
+<p>With <a class="reference external" href="https://www.jetbrains.com/pycharm/download/">PyCharm</a> you can follow these steps :</p>
+<ol class="arabic">
+<li><p>Launch PyCharm and choose <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code></p></li>
+<li><p><strong>Locate the project</strong> at the root directory <em>2deg_QH-SC-main</em>.</p></li>
+<li><p>Mark <code class="docutils literal notranslate"><span class="pre">Existing</span> <span class="pre">interpreter</span></code> (or <code class="docutils literal notranslate"><span class="pre">Previously</span> <span class="pre">configured</span> <span class="pre">interpreter</span></code>)
+and click on the selection icon <code class="docutils literal notranslate"><span class="pre">...</span></code></p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Conda</span> <span class="pre">Environment</span></code> and choose the location of the python executable.
+It should be located at :</p>
+<blockquote>
+<div><p>~/opt/miniconda3/envs/2deg_QH-SC/bin/python (macOS)</p>
+<p>~/miniconda3/envs/2deg_QH-SC/bin/python (Linux)</p>
+<p>~/miniconda3/envs/2deg_QH-SC/python (Windows)</p>
+</div></blockquote>
+</li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Ok</span></code> then on <code class="docutils literal notranslate"><span class="pre">Create</span></code> and select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">from</span> <span class="pre">existing</span> <span class="pre">sources</span></code></p></li>
+<li><p>You are ready to run the scripts!</p></li>
+<li><p>(Optional) You can see progress bars during the calculations by activating the
+<code class="docutils literal notranslate"><span class="pre">Emulate</span> <span class="pre">terminal</span> <span class="pre">in</span> <span class="pre">output</span> <span class="pre">console</span></code> option. For that, got to <code class="docutils literal notranslate"><span class="pre">Run-&gt;Edit</span> <span class="pre">Configurations</span></code>
+and check the option.</p></li>
+</ol>
+</section>
+<section id="running-the-scripts-by-using-visual-studio-code">
+<h2>Running the scripts by using Visual Studio Code<a class="headerlink" href="#running-the-scripts-by-using-visual-studio-code" title="Permalink to this headline"></a></h2>
+<p>With <a class="reference external" href="https://code.visualstudio.com/download/">Visual Studio Code</a> you can follow these steps :</p>
+<ol class="arabic simple">
+<li><p>Launch Visual Studio Code and install the <em>Python</em> extension if it’s not done yet.</p></li>
+<li><p>From the main page choose <code class="docutils literal notranslate"><span class="pre">Open...</span></code> , select the root directory <em>2deg_QH-SC-main</em>, and click on
+<code class="docutils literal notranslate"><span class="pre">Yes,</span> <span class="pre">I</span> <span class="pre">trust</span> <span class="pre">the</span> <span class="pre">authors</span></code></p></li>
+<li><p>Open the <em>Command Palette</em> with <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code>, search
+<code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Select</span> <span class="pre">Interpreter</span></code> and choose the one associated to the ‘2deg_QH-SC’
+environment.</p></li>
+<li><p>You are ready to run the scripts!</p></li>
+</ol>
+</section>
+<section id="updating-the-documentation">
+<h2>Updating the documentation<a class="headerlink" href="#updating-the-documentation" title="Permalink to this headline"></a></h2>
+<p>The <em>documentation</em> directory contains a <code class="docutils literal notranslate"><span class="pre">pdf</span></code> and a local <code class="docutils literal notranslate"><span class="pre">html</span></code> version of the documentation.
+They can respectively be found at <em>documentation/build/latex/2deg_qh-sc.pdf</em>
+and <em>documentation/build/html/index.html</em>. You can update them by using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="mi">2</span><span class="n">deg_QH</span><span class="o">-</span><span class="n">SC</span>
+<span class="n">cd</span> <span class="n">documentation</span>
+<span class="n">make</span> <span class="n">html</span>
+<span class="n">make</span> <span class="n">latexpdf</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you compile the documentation it runs the python scripts so make sure
+the calculations are commented before using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">latexpdf</span></code>.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to 2deg QH-SC’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main_scripts.html" class="btn btn-neutral float-right" title="Main Scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A. David, J. S. Meyer, M. Houzet.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

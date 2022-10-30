@@ -1,0 +1,124 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter C
+  \item \spxentry{calculations}
+    \subitem \spxentry{module}, \hyperpage{7}
+  \item \spxentry{chi\_m()}\spxextra{in module modules.functions}, \hyperpage{10}
+  \item \spxentry{chi\_p()}\spxextra{in module modules.functions}, \hyperpage{10}
+  \item \spxentry{compute\_corner\_transmissions()}\spxextra{in module modules.utils}, 
+		\hyperpage{16}
+  \item \spxentry{compute\_delta\_b\_and\_phi\_b()}\spxextra{in module modules.utils}, 
+		\hyperpage{16}
+  \item \spxentry{compute\_downstream\_conductance\_TB()}\spxextra{in module modules.utils}, 
+		\hyperpage{16}
+  \item \spxentry{compute\_micro\_nu\_crit()}\spxextra{in module modules.utils}, \hyperpage{16}
+  \item \spxentry{compute\_micro\_nu\_crit\_limit()}\spxextra{in module modules.utils}, 
+		\hyperpage{16}
+  \item \spxentry{compute\_momentum\_difference()}\spxextra{in module modules.utils}, 
+		\hyperpage{16}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{Device}\spxextra{class in modules.system}, \hyperpage{14}
+  \item \spxentry{DeviceInfinite}\spxextra{class in modules.system}, \hyperpage{15}
+  \item \spxentry{DeviceSingleCorner}\spxextra{class in modules.system}, \hyperpage{15}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{effective\_tau()}\spxextra{in module modules.functions}, \hyperpage{10}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{fermi\_momenta()}\spxextra{in module modules.functions}, \hyperpage{11}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{hole\_probability()}\spxextra{in module modules.functions}, \hyperpage{11}
+  \item \spxentry{hopping()}\spxextra{in module modules.functions}, \hyperpage{11}
+  \item \spxentry{hopping\_qh()}\spxextra{in module modules.functions}, \hyperpage{12}
+  \item \spxentry{hopping\_sc()}\spxextra{in module modules.functions}, \hyperpage{12}
+
+  \indexspace
+  \bigletter K
+  \item \spxentry{kronecker\_delta()}\spxextra{in module modules.functions}, \hyperpage{12}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{make\_system()}\spxextra{modules.system.Device method}, \hyperpage{15}
+  \item \spxentry{make\_system()}\spxextra{modules.system.DeviceInfinite method}, \hyperpage{15}
+  \item \spxentry{make\_system()}\spxextra{modules.system.DeviceSingleCorner method}, 
+		\hyperpage{15}
+  \item \spxentry{manuscript\_figures}
+    \subitem \spxentry{module}, \hyperpage{8}
+  \item \spxentry{module}
+    \subitem \spxentry{calculations}, \hyperpage{7}
+    \subitem \spxentry{manuscript\_figures}, \hyperpage{8}
+    \subitem \spxentry{modules.functions}, \hyperpage{9}
+    \subitem \spxentry{modules.system}, \hyperpage{14}
+    \subitem \spxentry{modules.utils}, \hyperpage{16}
+  \item \spxentry{modules.functions}
+    \subitem \spxentry{module}, \hyperpage{9}
+  \item \spxentry{modules.system}
+    \subitem \spxentry{module}, \hyperpage{14}
+  \item \spxentry{modules.utils}
+    \subitem \spxentry{module}, \hyperpage{16}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{onsite()}\spxextra{in module modules.functions}, \hyperpage{12}
+  \item \spxentry{onsite\_qh()}\spxextra{in module modules.functions}, \hyperpage{12}
+  \item \spxentry{onsite\_sc()}\spxextra{in module modules.functions}, \hyperpage{13}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{phi\_m()}\spxextra{in module modules.functions}, \hyperpage{13}
+  \item \spxentry{phi\_p()}\spxextra{in module modules.functions}, \hyperpage{13}
+  \item \spxentry{plot\_density()}\spxextra{in module modules.utils}, \hyperpage{17}
+  \item \spxentry{plot\_device()}\spxextra{in module modules.utils}, \hyperpage{17}
+  \item \spxentry{plot\_downstream\_conductance\_comparison()}\spxextra{in module modules.utils}, 
+		\hyperpage{17}
+  \item \spxentry{plot\_fh\_p\_vs\_Z\_various\_fillings()}\spxextra{in module modules.utils}, 
+		\hyperpage{17}
+  \item \spxentry{plot\_finite\_T\_conductance\_TB\_vs\_L()}\spxextra{in module modules.utils}, 
+		\hyperpage{18}
+  \item \spxentry{plot\_finite\_T\_conductance\_TB\_vs\_L\_various\_temps()}\spxextra{in module modules.utils}, 
+		\hyperpage{18}
+  \item \spxentry{plot\_k0\_vs\_nu()}\spxextra{in module modules.utils}, \hyperpage{18}
+  \item \spxentry{plot\_k0\_vs\_Z\_various\_fillings()}\spxextra{in module modules.utils}, 
+		\hyperpage{18}
+  \item \spxentry{plot\_micro\_nu\_crit\_limit\_vs\_mismatch()}\spxextra{in module modules.utils}, 
+		\hyperpage{19}
+  \item \spxentry{plot\_micro\_nu\_crit\_limit\_vs\_Z()}\spxextra{in module modules.utils}, 
+		\hyperpage{19}
+  \item \spxentry{plot\_micro\_nu\_crit\_vs\_mu\_qh\_delta()}\spxextra{in module modules.utils}, 
+		\hyperpage{19}
+  \item \spxentry{plot\_momentum\_difference\_vs\_energy()}\spxextra{in module modules.utils}, 
+		\hyperpage{19}
+  \item \spxentry{plot\_spectrum\_comparison()}\spxextra{in module modules.utils}, \hyperpage{19}
+  \item \spxentry{plot\_spectrum\_micro()}\spxextra{in module modules.utils}, \hyperpage{20}
+  \item \spxentry{plot\_spectrum\_TB()}\spxextra{in module modules.utils}, \hyperpage{19}
+  \item \spxentry{plot\_tau\_vs\_energy()}\spxextra{in module modules.utils}, \hyperpage{20}
+  \item \spxentry{plot\_tau\_vs\_theta\_qh\_various\_fillings()}\spxextra{in module modules.utils}, 
+		\hyperpage{20}
+  \item \spxentry{plot\_tau\_vs\_theta\_sc\_various\_fillings()}\spxextra{in module modules.utils}, 
+		\hyperpage{20}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{secular\_equation()}\spxextra{in module modules.functions}, \hyperpage{14}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{U()}\spxextra{in module modules.functions}, \hyperpage{9}
+  \item \spxentry{U\_m()}\spxextra{in module modules.functions}, \hyperpage{9}
+  \item \spxentry{U\_p()}\spxextra{in module modules.functions}, \hyperpage{9}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{velocity()}\spxextra{in module modules.functions}, \hyperpage{14}
+
+\end{sphinxtheindex}
