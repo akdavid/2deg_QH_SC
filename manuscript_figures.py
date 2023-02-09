@@ -135,30 +135,61 @@ utils.plot_nu_crit_limit_vs_Z(params, fig_name='fig10c')
 #####################################################
 # FIG. 11
 #####################################################
-_params = {**params, **{'mu_sc': 2*params['mu_qh'], 'nu': 2.8, 'Z': 0.7}}
 plt.rcParams['font.size'] = 31.5
 plt.rcParams['lines.linewidth'] = 2.5
 plt.rcParams['axes.linewidth'] = 2
-
-utils.plot_spectrum_micro(params=_params, fig_name='fig11a')
-utils.plot_momentum_difference_vs_energy(_params, fig_name='fig11b')
-
-device = system.DeviceSingleCorner(theta_qh=0, theta_sc=90, params=_params)
-device.dimensions = {**device.dimensions, **{"L_interface": 20*device.lB}}
-utils.plot_tau_vs_energy(device=device, fig_name='fig11c', tau_label=1)
-
-device = system.DeviceSingleCorner(theta_qh=90, theta_sc=90, params=_params)
-device.dimensions = {**device.dimensions, **{"L_interface": 20*device.lB}}
-utils.plot_tau_vs_energy(device=device, fig_name='fig11d', tau_label=2)
+nus = [1.2, 1.6, 2.0, 2.4, 2.75]
+deltas = params['mu_qh'] / np.linspace(5, 20, 51)
+utils.plot_tau_vs_mu_qh_delta_various_fillings(nus, deltas, theta_qh=90, theta_sc=45, params=params, fig_name='fig11a')    
+utils.plot_tau_vs_mu_qh_delta_various_fillings(nus, deltas, theta_qh=90, theta_sc=135, params=params, fig_name='fig11b') 
 """
 
 """Fig. 12
 #####################################################
 # FIG. 12
 #####################################################
+# The corresponding figures in the manuscript have been done by choosing different dimensions for the system's size so 
+# that the wave function decay entirely in the vicinity of the SC-vacuum corner. This modification does not matter as
+# the resulting values of the Andreev conversion tau are not significantly affected (they differ by ~1/1000). 
+# More precisely, we have multiplied L_sc, L_interface, and L_theta_sc by 1.5 for mu_QH/Delta = 20, then we have chosen 
+# the same dimensions for mu_QH/Delta = 10, and we have finally cut the SC region where the wave function don't penetrate. 
+plt.rcParams['font.size'] = 30.75
+_params = {**params, **{'nu': 2.75, 'delta': params['mu_qh']/10}}
+device = system.DeviceSingleCorner(theta_qh=90, theta_sc=135, params=_params)
+utils.plot_density(device=device, fig_name='fig12a')
+_params = {**params, **{'nu': 2.75, 'delta': params['mu_qh']/20}}
+device = system.DeviceSingleCorner(theta_qh=90, theta_sc=135, params=_params)
+utils.plot_density(device=device, fig_name='fig12b')
+"""
+
+"""Fig. 13
+#####################################################
+# FIG. 13
+#####################################################
+_params = {**params, **{'mu_sc': 2*params['mu_qh'], 'nu': 2.8, 'Z': 0.7}}
+plt.rcParams['font.size'] = 31.5
+plt.rcParams['lines.linewidth'] = 2.5
+plt.rcParams['axes.linewidth'] = 2
+
+utils.plot_spectrum_micro(params=_params, fig_name='fig13a')
+utils.plot_momentum_difference_vs_energy(_params, fig_name='fig13b')
+
+device = system.DeviceSingleCorner(theta_qh=0, theta_sc=90, params=_params)
+device.dimensions = {**device.dimensions, **{"L_interface": 20*device.lB}}
+utils.plot_tau_vs_energy(device=device, fig_name='fig13c', tau_label=1)
+
+device = system.DeviceSingleCorner(theta_qh=90, theta_sc=90, params=_params)
+device.dimensions = {**device.dimensions, **{"L_interface": 20*device.lB}}
+utils.plot_tau_vs_energy(device=device, fig_name='fig13d', tau_label=2)
+"""
+
+"""Fig. 14
+#####################################################
+# FIG. 14
+#####################################################
 _params = {**params, **{'mu_sc': 2*params['mu_qh'], 'nu': 2.8, 'Z': 0.7}}
 device = system.Device(theta_1=0, theta_2=90, params=_params)
 Ls = device.lB * np.arange(0, 30+.6, .6)
 kTs = [_params["delta"]/10, _params["delta"]/2]
-utils.plot_finite_T_conductance_TB_vs_L_various_temps(device, kTs, Ls, fig_name='fig12')
+utils.plot_finite_T_conductance_TB_vs_L_various_temps(device, kTs, Ls, fig_name='fig14')
 """

@@ -195,7 +195,7 @@ def plot_density(device, energy=0., fig_name=False):
     else:
         fig.savefig('./figures/' + str(fig_name) + '.pdf', bbox_inches='tight', transparent=True)
     plt.show()
-
+    
 
 ##################################################
 # Energy spectrum
@@ -245,7 +245,7 @@ def plot_spectrum_TB(device, from_data=True):
     ax.xaxis.set_tick_params(which='minor', size=7, width=2, direction='in')
     ax.yaxis.set_tick_params(which='major', size=10, width=2, direction='in')
     ax.yaxis.set_tick_params(which='minor', size=7, width=2, direction='in')
-    ax.xaxis.set_major_locator(MultipleLocator(.5))
+    ax.xaxis.set_major_locator(MultipleLocator(1))
     ax.yaxis.set_major_locator(MultipleLocator(1))
     ax.grid(which='major')
     ax.set_axisbelow(True)    
@@ -862,7 +862,6 @@ def plot_tau_vs_theta_sc_various_fillings(nus, thetas, device, fig_name=False, f
     ax.xaxis.set_tick_params(which='major', size=10, width=2, direction='in')
     ax.yaxis.set_major_locator(MultipleLocator(0.2))
     ax.yaxis.set_tick_params(which='major', size=10, width=2, direction='in')
-    # ax.set_xlim([-45, 135])
     ax.set_ylim([0, 1])
     ax.grid()
     ax.set_axisbelow(True)
@@ -873,6 +872,121 @@ def plot_tau_vs_theta_sc_various_fillings(nus, thetas, device, fig_name=False, f
     if not fig_name:
         fig.savefig('files/andreev_and_hole_prob/andreev_transmission/varying_theta_sc/plots/tau_vs_theta_sc'
                     + '_theta_qh=' + str(device.theta_qh) + str(plot_name) + '.pdf', bbox_inches='tight', transparent=True)
+    else:
+        fig.savefig('./figures/' + str(fig_name) + '.pdf', bbox_inches='tight', transparent=True)
+    plt.show()
+
+
+def plot_tau_vs_mu_qh_delta_various_fillings(nus, deltas, theta_qh, theta_sc, params, from_data=True, fig_name=False):
+    """Plot the corner's Andreev transmission versus mu_{QH}/Delta for various values of the filling factor.
+
+    The data and plot are saved in the directory 
+    'files/chapter3/andreev_transmission/varying_mu_qh_delta'.
+
+    :param list nus: The values of the filling factor.
+    :param list deltas: The values of the SC gap.
+    :param float theta_qh: The QH angle.
+    :param float theta_sc: The SC angle.
+    :param dict params: The system's parameters.
+    :param bool from_data: If True the spectrum is plotted using the existing data.
+                          If False the data are computed even if they exist.
+    :param str fig_name: The name of the plot used for the manuscript, optional.
+    """
+    geometry = f'theta={str(theta_qh)}_theta_sc={str(theta_sc)}'
+    def compute_tau_vs_mu_qh_delta(nu_calc):
+        name_calc = '_a=' + str(params['a']) + '_t=' + str(params['t']) \
+                    + '_mu_qh=' + str(params['mu_qh']) + '_mu_sc=' + str(params['mu_sc']) + '_nu=' + str(nu_calc) \
+                    + '_Z=' + str(params['Z'])
+
+        def compute_tau_val(delta):
+            _params = dict(a=params['a'], t=params['t'], mu_qh=params['mu_qh'], mu_sc=params['mu_sc'],
+                           delta=delta, nu=nu_calc, Z=params['Z'])
+
+            from modules import system
+            device = system.DeviceSingleCorner(theta_qh, theta_sc, params=_params)
+            fsyst = device.make_system(onsite, onsite_qh, onsite_sc, 
+                                       hopping, hopping_qh, hopping_sc).finalized()
+            sm = kwant.smatrix(fsyst, energy=0.0, params=_params)
+            
+            tm = sm.submatrix(1, 0)  # transmission matrix from lead 0 to lead 1
+            if np.shape(tm) == (2, 2):
+                t_he = tm[0][0]
+                tau = np.abs(t_he) ** 2
+            elif np.shape(tm) == (4, 2):
+                t_he = tm[1][0]
+                t_h2e = tm[0][0]
+                tau = np.abs(t_he) ** 2 
+                # tau = np.abs(t_he) ** 2 + np.abs(t_h2e) ** 2     # extra term due to track states.
+            else:
+                print('Unknown shape of the transmission matrix.')
+                t_he = tm[0][0]
+                tau = np.abs(t_he) ** 2
+                
+            return tau
+
+        num_cores = multiprocessing.cpu_count()
+        taus = Parallel(n_jobs=num_cores, verbose=len(deltas))(delayed(compute_tau_val)(delta) for delta in deltas)
+        taus = np.asarray(taus)
+        np.save('files/andreev_and_hole_prob/andreev_transmission/varying_mu_qh_delta/data/tau_vs_mu_qh_delta_'
+                + str(geometry) + str(name_calc) + '.npy', [deltas, taus])
+        return [deltas, taus]
+
+    delta_vals = []
+    tau_vals = []
+    i = 0
+    for nu_val in nus:
+        file_name = '_a=' + str(params['a']) + '_t=' + str(params['t']) \
+                    + '_mu_qh=' + str(params['mu_qh']) + '_mu_sc=' + str(params['mu_sc']) + '_nu=' + str(nu_val) \
+                    + '_Z=' + str(params['Z'])
+        i += 1
+
+        if from_data:
+            if os.path.isfile('files/andreev_and_hole_prob/andreev_transmission/varying_mu_qh_delta/data/'
+                              'tau_vs_mu_qh_delta_'
+                              + str(geometry) + str(file_name) + '.npy'):
+                data = np.load('files/andreev_and_hole_prob/andreev_transmission/varying_mu_qh_delta/data/'
+                               'tau_vs_mu_qh_delta_'
+                               + str(geometry) + str(file_name) + '.npy', allow_pickle=True)
+            else:
+                print('--------------------------------------------------------------------')
+                print(f'Computing transmissions for nu = {str(nu_val)} ({i}/{len(nus)})')
+                print('--------------------------------------------------------------------')
+                data = compute_tau_vs_mu_qh_delta(nu_val)
+        else:
+            print('--------------------------------------------------------------------')
+            print(f'Computing transmissions for nu = {str(nu_val)} ({i}/{len(nus)})')
+            print('--------------------------------------------------------------------')
+            data = compute_tau_vs_mu_qh_delta(nu_val)
+
+        delta_list, tau_values = data
+
+        delta_vals.append(delta_list)
+        tau_vals.append(tau_values)
+
+    plot_name = '_a=' + str(params['a']) + '_t=' + str(params['t']) \
+                + '_mu_qh=' + str(params['mu_qh']) + '_mu_sc=' + str(params['mu_sc']) + '_Z=' + str(params['Z'])
+
+    markers = ['-o', '-s', '-x', '-v', '-d', '-+', '-^', '-<', '->']
+
+    # Plot
+    fig, ax = plt.subplots()
+    # ax.xaxis.set_major_locator(MultipleLocator(1))
+    ax.xaxis.set_tick_params(which='major', size=10, width=2, direction='in')
+    # ax.yaxis.set_major_locator(MultipleLocator(0.1))
+    ax.yaxis.set_tick_params(which='major', size=10, width=2, direction='in')
+    ax.set_xlim([np.min(params['mu_qh']/deltas), np.max(params['mu_qh']/deltas)])
+    ax.set_ylim([0, 1])
+    ax.grid()
+    ax.set_axisbelow(True)
+    ax.set(xlabel=r'$\mu_{QH}/\Delta$', ylabel=r'$\tau$')
+    for i in range(len(nus)):
+        ax.plot(params['mu_qh'] / delta_vals[i], tau_vals[i], markers[i], label=r'$\nu = $ ' + str(nus[i]))
+    fig.legend(ncol=2, 
+               fontsize=22
+               )
+    if not fig_name:
+        fig.savefig('files/andreev_and_hole_prob/andreev_transmission/varying_mu_qh_delta/plots/tau_vs_mu_qh_delta_'
+                    + str(geometry) + str(plot_name) + '.pdf', bbox_inches='tight', transparent=True)
     else:
         fig.savefig('./figures/' + str(fig_name) + '.pdf', bbox_inches='tight', transparent=True)
     plt.show()

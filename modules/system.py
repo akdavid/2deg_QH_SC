@@ -23,21 +23,21 @@ class DeviceSingleCorner:
         self.params = params
         self.small_val = small
         self.m = 1 / (2 * self.params["t"] * self.params["a"] ** 2)
-        self.omega = 2 * self.params["mu_qh"] / self.params["nu"]
+        self.omega = 2 * self.params["mu_qh"] / self.params["nu"]        
         self.lB = 1 / np.sqrt(self.m * self.omega)
         self.kF_sc = np.sqrt(2 * self.m * self.params["mu_sc"])
         self.kF_qh = np.sqrt(2 * self.m * self.params["mu_qh"])
         self.vF_sc = self.kF_sc / self.m
         self.V_barrier = self.params['Z'] * self.vF_sc / 2
-        self.xi = self.vF_sc / self.params["delta"]
+        self.xi = self.vF_sc / self.params["delta"]    
         self.theta = theta_qh
         self.theta_qh = self.theta
         self.theta_sc = theta_sc        
         self.geometry = f'theta={str(theta_qh)}_theta_sc={str(theta_sc)}'
         self.dimensions = dict(
-            L_qh=40 * self.lB,          # Length of the QH region
-            L_sc=6 * self.xi,           # Length of the SC region
-            L_interface=40 * self.lB    # Length of the QH-SC interface
+            L_qh = 40 * self.lB,              # Length of the QH region
+            L_sc = 6 * self.xi,           # Length of the SC region
+            L_interface = 40 * self.lB    # Length of the QH-SC interface
         )
         self.params_name = ''.join(['_%s=%s' % (key, value) for key, value in self.params.items()])
         self.device_type = 'single_corner'
@@ -109,7 +109,7 @@ class DeviceSingleCorner:
         def top_right_sc_large(pos):
             x, y = pos
             if y > 0:
-                return np.abs(y) <= W_sc_large / 2 and 4*L_x_sc <= x <= round(self.dimensions["L_sc"]) 
+                return np.abs(y) <= W_sc_large / 2 and 4*L_x_sc <= x <= max(round(5*L_x_sc), round(self.dimensions["L_sc"]))
 
         # Onsite
         # SC
@@ -180,7 +180,10 @@ class DeviceSingleCorner:
 
         sites = list(syst.sites()) 
         sites_pos = [site[1] for site in sites]
-        y_pos_at_L_sc = [site[1] for site in sites_pos if site[0] == int(round(self.dimensions["L_sc"]))]
+        if 90 < self.theta_sc and self.small_val==False:
+            y_pos_at_L_sc = [site[1] for site in sites_pos if site[0] == max(int(round(5*L_x_sc)), round(self.dimensions["L_sc"]))]
+        else:
+            y_pos_at_L_sc = [site[1] for site in sites_pos if site[0] == int(round(self.dimensions["L_sc"]))]
         ymax_at_L_sc = np.max(y_pos_at_L_sc)
 
         # Leads

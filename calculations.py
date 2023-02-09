@@ -26,6 +26,7 @@ Contents:
 
   - tau *v.s.* theta_qh at various fillings
   - tau *v.s.* theta_sc at various fillings
+  - tau *v.s.* mu_qh/Delta at various fillings
   - fh_p *v.s.* Z at various fillings
 
 * Downstream conductance
@@ -48,6 +49,7 @@ Contents:
 
 The resulting data and plots are saved in the ‘files‘ directory.
 """
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from modules import system, functions, utils
@@ -156,7 +158,7 @@ utils.plot_k0_vs_Z_various_fillings(nus, Zs, params)
 
 ##########################################################################################
 ##########################################################################################
-#                   ANDREEV TRANSMISSION AND HOLE PROBABILITY
+#                   ANDREEV TRANSMISSION AND HOLE CONTENT
 ##########################################################################################
 ##########################################################################################
 """Plot tau vs theta_qh at various fillings
@@ -173,6 +175,13 @@ nus = [1.2, 1.6, 2., 2.4, 2.8]
 thetas = [-45, 0, 45, 75.96375653207353, 90, 135, 153.43494882292202, 165.96375653207352]
 device = system.DeviceSingleCorner(theta_qh=90, theta_sc=None, params=params_small, small=True)
 utils.plot_tau_vs_theta_sc_various_fillings(nus, thetas, device, from_data=True)
+"""
+
+"""Plot tau vs mu_qh/delta at various fillings
+plt.rcParams['font.size'] = 18
+nus = [1.2, 1.6, 2., 2.4, 2.8]
+deltas = params['mu_qh'] * np.linspace(1/20, 1, 21)
+utils.plot_tau_vs_mu_qh_delta_various_fillings(nus, deltas, theta_qh=0, theta_sc=90, params=params, from_data=True)    
 """
 
 """Plot fh_p vs Z at various fillings
