@@ -1,10 +1,9 @@
-Effects of the geometry on the downstream conductance in quantum Hall-superconductor hybrid systems 
-===================================================================================================
+Geometrical effects on the downstream conductance in quantum-Hall--superconductor hybrid systems 
+================================================================================================
 
-By A. David.
+By Anthony DAVID
 
-Repository of the code used in the paper “Effects of the geometry on the downstream conductance in quantum Hall-superconductor hybrid systems” 
-available on arXiv. A documentation of the code is available on `Read the Docs <https://2deg_qh-sc.readthedocs.io/en/latest/>`_.
+Repository of the code used in the paper “Geometrical effects on the downstream conductance in quantum-Hall--superconductor hybrid systems” available on `arXiv <https://arxiv.org/abs/2210.16867>`_ and published in `Phys. Rev. B <https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.125416>`_. A documentation of the code is available on `Read the Docs <https://2deg-qh-sc.readthedocs.io/en/latest/>`_.
 
 
 Content description
