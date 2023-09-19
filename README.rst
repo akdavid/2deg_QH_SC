@@ -32,8 +32,8 @@ Miniconda, GitHub repository and conda environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First install `miniconda <https://docs.conda.io/en/latest/miniconda.html>`_.
-Clone the `repository <https://github.com/akdavid/2deg_QH-SC/>`_, unzip it and 
-and ``cd`` into the root directory *2deg_QH-SC-main* from the terminal.
+Clone the `repository <https://github.com/akdavid/2deg_QH_SC/>`_, unzip it and 
+and ``cd`` into the root directory *2deg_QH_SC-main* from the terminal.
 Then create the Conda environment that contains all dependencies with ::
 
    conda env create -f environment.yml
@@ -52,16 +52,16 @@ To run a script from the terminal use the following command line: ::
 
 The python executable  should be located at :
 
-      ~/opt/miniconda3/envs/2deg_QH-SC/bin/python (macOS)
+      ~/opt/miniconda3/envs/2deg_QH_SC/bin/python (macOS)
 
-      ~/miniconda3/envs/2deg_QH-SC/bin/python (Linux)
+      ~/miniconda3/envs/2deg_QH_SC/bin/python (Linux)
 
-      ~/miniconda3/envs/2deg_QH-SC/python (Windows)
+      ~/miniconda3/envs/2deg_QH_SC/python (Windows)
 
 For example, if you are on macOS and you want to run the script
 *calculations.py* (while being in the root directory of the repo), use ::
 
-    ~/opt/miniconda3/envs/2deg_QH-SC/bin/python calculations.py
+    ~/opt/miniconda3/envs/2deg_QH_SC/bin/python calculations.py
 
 
 .. NOTE::
@@ -74,7 +74,7 @@ For example, if you are on macOS and you want to run the script
 
    Add the following in the file ::
    
-       export mypython=~/opt/miniconda3/envs/2deg_QH-SC/bin/python
+       export mypython=~/opt/miniconda3/envs/2deg_QH_SC/bin/python
 
    and save it with ``Ctrl+X`` and ``Y`` and ``Enter``. 
    Then close the terminal and open a new one to make the modification effective. 
@@ -91,7 +91,7 @@ Running the scripts by using PyCharm
 With `PyCharm <https://www.jetbrains.com/pycharm/download/>`_ you can follow these steps :
 
 1. Launch PyCharm and choose ``Create New Project`` 
-2. **Locate the project** at the root directory *2deg_QH-SC-main*.
+2. **Locate the project** at the root directory *2deg_QH_SC-main*.
 3. Mark ``Existing interpreter`` (or ``Previously configured interpreter``)
    and click on the selection icon ``...``
 4. Select ``Conda Environment`` and choose the location of the python executable.
@@ -117,7 +117,7 @@ Running the scripts by using Visual Studio Code
 With `Visual Studio Code <https://code.visualstudio.com/download/>`_ you can follow these steps :
 
 1. Launch Visual Studio Code and install the *Python* extension if it is not done yet.
-2. From the main page choose ``Open...`` , select the root directory *2deg_QH-SC-main*, and click on
+2. From the main page choose ``Open...`` , select the root directory *2deg_QH_SC-main*, and click on
    ``Yes, I trust the authors``
 3. Open the *Command Palette* with ``Ctrl+Shift+P``, search
    ``Python: Select Interpreter`` and choose the one associated to the '2deg_QH-SC'
