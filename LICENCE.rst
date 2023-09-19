@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2022 Anthony David, Julia S. Meyer, Manuel Houzet
+Copyright (c) 2022 Anthony David
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
