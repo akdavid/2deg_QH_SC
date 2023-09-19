@@ -52,11 +52,11 @@ To run a script from the terminal use the following command line: ::
 
 The python executable  should be located at :
 
-      ~/opt/miniconda3/envs/2deg_QH_SC/bin/python (macOS)
+      ~/opt/miniconda3/envs/2deg_QH-SC/bin/python (macOS)
 
-      ~/miniconda3/envs/2deg_QH_SC/bin/python (Linux)
+      ~/miniconda3/envs/2deg_QH-SC/bin/python (Linux)
 
-      ~/miniconda3/envs/2deg_QH_SC/python (Windows)
+      ~/miniconda3/envs/2deg_QH-SC/python (Windows)
 
 For example, if you are on macOS and you want to run the script
 *calculations.py* (while being in the root directory of the repo), use ::
@@ -74,7 +74,7 @@ For example, if you are on macOS and you want to run the script
 
    Add the following in the file ::
    
-       export mypython=~/opt/miniconda3/envs/2deg_QH_SC/bin/python
+       export mypython=~/opt/miniconda3/envs/2deg_QH-SC/bin/python
 
    and save it with ``Ctrl+X`` and ``Y`` and ``Enter``. 
    Then close the terminal and open a new one to make the modification effective. 
