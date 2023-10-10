@@ -6,7 +6,7 @@
 Welcome to 2deg QH-SC's documentation!
 ======================================
 
-Documentation of the code used in the paper "On the limits of one-dimensional models of chiral Andreev edge states" available on `arXiv <https://arxiv.org/abs/2201.04602/>`_. The code is available in a `Github Repository <https://github.com/akdavid/2deg_QH-SC/>`_.
+Documentation of the code used in the paper “Geometrical effects on the downstream conductance in quantum-Hall--superconductor hybrid systems” available on `arXiv <https://arxiv.org/abs/2210.16867>`_ and published in `Phys. Rev. B <https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.125416>`_. The code is available in a `Github Repository <https://github.com/akdavid/2deg_QH_SC/>`_.
 
 Check the :doc:`usage` section to install and use the code. The :doc:`main_scripts` section includes the script *calculations.py* which can be used to run the different calculations and the script *manuscript_figures.py* that generates the manuscript figures. The :doc:`modules` section describes the different modules used to run the calculations. 
 
