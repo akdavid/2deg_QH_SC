@@ -6,7 +6,7 @@ version: 2
 
 # Set the OS and Python version might need
 build:
-  os: macos-12.7
+  os: ubuntu-22.04
   tools:
     python: "3.7"
 
