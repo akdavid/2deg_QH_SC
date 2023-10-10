@@ -50,6 +50,7 @@ Contents:
 The resulting data and plots are saved in the ‘files‘ directory.
 """
 
+"""
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from modules import system, functions, utils
@@ -61,7 +62,7 @@ import kwantspectrum as ks
 mpl.rcParams['font.family'] = 'Arial'
 plt.rcParams['font.size'] = 14
 plt.rcParams['axes.linewidth'] = 1.5
-
+"""
 # Default parameters used in the manuscript for an ideal interface.
 params = dict(a=1, t=1, mu_qh=0.05, mu_sc=0.05, delta=0.005, nu=2., Z=0.)
 
