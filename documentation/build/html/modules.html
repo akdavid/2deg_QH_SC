@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modules &mdash; 2deg_QH-SC 0.1 documentation</title>
+  <title>Modules &mdash; 2deg_QH_SC 3.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> 2deg_QH-SC
+            <a href="index.html" class="icon icon-home"> 2deg_QH_SC
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -55,7 +55,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">2deg_QH-SC</a>
+          <a href="index.html">2deg_QH_SC</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -530,8 +530,7 @@ and the Fermi momenta by solving the secular equation f(k, E) = 0.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="modules.system.Device">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">modules.system.</span></span><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.system.Device" title="Permalink to this definition"></a></dt>
-<dd><p>Construct a QH-SC junction with arbitrary QH angles 
-and a rectangle-shaped SC.</p>
+<dd><p>Construct a QH-SC junction with arbitrary QH angles and a rectangle-shaped SC.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -611,7 +610,11 @@ default to False.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>onsite</strong> (<em>fun</em>) – Onsite energy function.</p></li>
+<li><p><strong>onsite_qh</strong> (<em>fun</em>) – Onsite energy function in QH region.</p></li>
+<li><p><strong>onsite_sc</strong> (<em>fun</em>) – Onsite energy function in SC region.</p></li>
 <li><p><strong>hopping</strong> (<em>fun</em>) – Hopping energy function.</p></li>
+<li><p><strong>hopping_qh</strong> (<em>fun</em>) – Hopping energy function in QH region.</p></li>
+<li><p><strong>hopping_sc</strong> (<em>fun</em>) – Hopping energy function in SC region.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -687,45 +690,6 @@ default to False.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="modules.utils.compute_micro_nu_crit">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_micro_nu_crit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_micro_nu_crit" title="Permalink to this definition"></a></dt>
-<dd><p>Compute the value of nu_crit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The value of nu_crit.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="modules.utils.compute_micro_nu_crit_limit">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_micro_nu_crit_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_micro_nu_crit_limit" title="Permalink to this definition"></a></dt>
-<dd><p>Compute the asymptotic value of nu_crit.</p>
-<p>Track states can cross the Fermi level if the filling factor is high enough.
-The minimal value of nu for which they cross it is called nu_crit.
-It turns out that nu_crit decreases with the SC gap
-and reaches an asymptotic value as the gap tends to zero.
-This is what we compute here.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The asymptotic value of nu_crit</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.compute_momentum_difference">
 <span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_momentum_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_momentum_difference" title="Permalink to this definition"></a></dt>
 <dd><p>Compute the momentum difference dk.</p>
@@ -738,6 +702,28 @@ This is what we compute here.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The value of dk.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.compute_nu_crit">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">compute_nu_crit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.compute_nu_crit" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the value of nu_crit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>nu_min</strong> (<em>float</em>) – Lower bound, defaults to 1.</p></li>
+<li><p><strong>nu_max</strong> (<em>float</em>) – Higher bound, defaults to 3.</p></li>
+<li><p><strong>tol</strong> (<em>float</em>) – Precision of the returned value, defaults to 1E-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of nu_crit.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
@@ -815,26 +801,6 @@ If False the data are computed even if they exist.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="modules.utils.plot_finite_T_conductance_TB_vs_L">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_finite_T_conductance_TB_vs_L</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_finite_T_conductance_TB_vs_L" title="Permalink to this definition"></a></dt>
-<dd><p>Plot the finite-temperature downstream conductance versus the energy by using the tight-binding model.</p>
-<p>The data and the plot are saved in the directory
-‘files/finite_temperature/downstream_conductance/varying_L/tight_binding’.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
-<li><p><strong>kT</strong> (<em>float</em>) – The thermal energy kB*T.</p></li>
-<li><p><strong>Ls</strong> (<em>list</em>) – The values of the interface’s length.</p></li>
-<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
-If False the data are computed even if they exist.</p></li>
-<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.plot_finite_T_conductance_TB_vs_L_various_temps">
 <span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_finite_T_conductance_TB_vs_L_various_temps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kTs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_finite_T_conductance_TB_vs_L_various_temps" title="Permalink to this definition"></a></dt>
 <dd><p>Plot the finite-temperature downstream conductance versus the energy for various temperatures.</p>
@@ -889,51 +855,6 @@ If False the data are computed even if they exist.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="modules.utils.plot_micro_nu_crit_limit_vs_Z">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_micro_nu_crit_limit_vs_Z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_micro_nu_crit_limit_vs_Z" title="Permalink to this definition"></a></dt>
-<dd><p>Plot the asymptotic value of nu_crit <em>v.s.</em> Z.</p>
-<p>The resulting plot is saved in the ‘files/track_states/nu_crit/varying_Z’ directory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
-<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="modules.utils.plot_micro_nu_crit_limit_vs_mismatch">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_micro_nu_crit_limit_vs_mismatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_micro_nu_crit_limit_vs_mismatch" title="Permalink to this definition"></a></dt>
-<dd><p>Plot the asymptotic value of nu_crit <em>v.s.</em> mu_sc/mu_qh.</p>
-<p>The resulting plot is saved in the ‘files/track_states/nu_crit/varying_mismatch’ directory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
-<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="modules.utils.plot_micro_nu_crit_vs_mu_qh_delta">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_micro_nu_crit_vs_mu_qh_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_micro_nu_crit_vs_mu_qh_delta" title="Permalink to this definition"></a></dt>
-<dd><p>Plot nu_crit <em>v.s.</em> mu_qh/delta.</p>
-<p>The resulting plot is saved in the ‘files/track_states/nu_crit/varying_mu_qh_delta’ directory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
-<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.plot_momentum_difference_vs_energy">
 <span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_momentum_difference_vs_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_momentum_difference_vs_energy" title="Permalink to this definition"></a></dt>
 <dd><p>Plot momentum difference <em>v.s.</em> energy.</p>
@@ -942,6 +863,57 @@ If False the data are computed even if they exist.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_nu_crit_limit_vs_Z">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_nu_crit_limit_vs_Z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_nu_crit_limit_vs_Z" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the asymptotic value of nu_crit <em>v.s.</em> Z.</p>
+<p>The resulting plot is saved in the ‘files/track_states/varying_Z’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist. Defaults to True.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_nu_crit_limit_vs_mismatch">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_nu_crit_limit_vs_mismatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_nu_crit_limit_vs_mismatch" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the asymptotic value of nu_crit <em>v.s.</em> mu_sc/mu_qh.</p>
+<p>The resulting plot is saved in the ‘files/track_states/varying_mismatch’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist. Defaults to True.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_nu_crit_vs_mu_qh_delta">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_nu_crit_vs_mu_qh_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_nu_crit_vs_mu_qh_delta" title="Permalink to this definition"></a></dt>
+<dd><p>Plot nu_crit <em>v.s.</em> mu_qh/delta.</p>
+<p>The resulting plot is saved in the ‘files/track_states/varying_mu_qh_delta’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist. Defaults to True.</p></li>
 <li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
 </ul>
 </dd>
@@ -984,7 +956,7 @@ If False the data are computed even if they exist.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.plot_spectrum_micro">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_spectrum_micro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_k0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_spectrum_micro" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_spectrum_micro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_k0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qp_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_spectrum_micro" title="Permalink to this definition"></a></dt>
 <dd><p>Plot microscopic spectrum.</p>
 <p>The data and plots are saved in the directory ‘files/energy_spectrum/microscopic’.</p>
 <dl class="field-list simple">
@@ -994,6 +966,8 @@ If False the data are computed even if they exist.</p></li>
 <li><p><strong>from_data</strong> (<em>bool</em>) – If true the spectrum is plotted using the existing data.
 If False the data are computed even if they exist.</p></li>
 <li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
+<li><p><strong>show_k0</strong> (<em>str</em>) – Show the position of k0, default to False.</p></li>
+<li><p><strong>qp_labels</strong> (<em>str</em>) – Show the quasiparticles labels, default to False.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1001,7 +975,7 @@ If False the data are computed even if they exist.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.plot_tau_vs_energy">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_energy" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_energy" title="Permalink to this definition"></a></dt>
 <dd><p>Plot the conversion probabilty tau vs energy.</p>
 <p>The data and the plot are saved in the directory
 ‘files/finite_temperature/scattering_probabilities/transmissions/’.</p>
@@ -1011,7 +985,30 @@ If False the data are computed even if they exist.</p></li>
 <li><p><strong>device</strong> (<em>object</em>) – The QH-SC junction.</p></li>
 <li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
 <li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
+If False the data are computed even if they exist. Defaults to True.</p></li>
+<li><p><strong>tau_label</strong> (<em>int</em>) – None, 1 or 2. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.plot_tau_vs_mu_qh_delta_various_fillings">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_mu_qh_delta_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_qh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_mu_qh_delta_various_fillings" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the corner’s Andreev transmission versus mu_{QH}/Delta for various values of the filling factor.</p>
+<p>The data and plot are saved in the directory 
+‘files/chapter3/andreev_transmission/varying_mu_qh_delta’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nus</strong> (<em>list</em>) – The values of the filling factor.</p></li>
+<li><p><strong>deltas</strong> (<em>list</em>) – The values of the SC gap.</p></li>
+<li><p><strong>theta_qh</strong> (<em>float</em>) – The QH angle.</p></li>
+<li><p><strong>theta_sc</strong> (<em>float</em>) – The SC angle.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – The system’s parameters.</p></li>
+<li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the existing data.
 If False the data are computed even if they exist.</p></li>
+<li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1019,7 +1016,7 @@ If False the data are computed even if they exist.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.plot_tau_vs_theta_qh_various_fillings">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_theta_qh_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_theta_qh_various_fillings" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_theta_qh_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_only_commensurate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_theta_qh_various_fillings" title="Permalink to this definition"></a></dt>
 <dd><p>Plot the corner’s Andreev transmission versus the QH angle for various values of the filling factor.</p>
 <p>The data and the plot are saved in the directory 
 ‘files/andreev_and_hole_prob/andreev_transmission/varying_theta’.</p>
@@ -1032,6 +1029,7 @@ If False the data are computed even if they exist.</p></li>
 <li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
 <li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the stored data.
 If False the data are computed even if they exist.</p></li>
+<li><p><strong>show_only_commensurate</strong> (<em>bool</em>) – If True only the commensurate angles are shown. Defaults to False.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1039,7 +1037,7 @@ If False the data are computed even if they exist.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="modules.utils.plot_tau_vs_theta_sc_various_fillings">
-<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_theta_sc_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_theta_sc_various_fillings" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">modules.utils.</span></span><span class="sig-name descname"><span class="pre">plot_tau_vs_theta_sc_various_fillings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_only_commensurate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.utils.plot_tau_vs_theta_sc_various_fillings" title="Permalink to this definition"></a></dt>
 <dd><p>Plot the corner’s Andreev transmission versus the SC angle for various values of the filling factor.</p>
 <p>The data and the plot are saved in the directory 
 ‘files/andreev_and_hole_prob/andreev_transmission/varying_theta_sc’.</p>
@@ -1052,6 +1050,7 @@ If False the data are computed even if they exist.</p></li>
 <li><p><strong>fig_name</strong> (<em>str</em>) – The name of the plot used for the manuscript, optional.</p></li>
 <li><p><strong>from_data</strong> (<em>bool</em>) – If True the spectrum is plotted using the stored data.
 If False the data are computed even if they exist.</p></li>
+<li><p><strong>show_only_commensurate</strong> (<em>bool</em>) – If True only the commensurate angles are shown. Defaults to False.</p></li>
 </ul>
 </dd>
 </dl>
