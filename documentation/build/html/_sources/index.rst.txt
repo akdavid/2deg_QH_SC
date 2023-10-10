@@ -31,5 +31,5 @@ Indices and tables
 License
 -------
 
-See the `license terms <https://github.com/akdavid/2deg_QH-SC/blob/main/LICENCE.rst>`_ 
+See the `license terms <https://github.com/akdavid/2deg_QH_SC/blob/main/LICENCE.rst>`_ 
 for license rights and limitations (MIT).

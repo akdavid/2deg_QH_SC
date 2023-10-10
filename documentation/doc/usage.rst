@@ -13,7 +13,7 @@ Miniconda, GitHub repository and conda environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Install `miniconda <http://conda.pydata.org/miniconda.html/>`_
-, clone the `repository <https://github.com/akdavid/2deg_QH-SC/>`_
+, clone the `repository <https://github.com/akdavid/2deg_QH_SC/>`_
 and ``cd`` into the root directory *2deg_QH-SC-main* after unzipping.
 Then create the Conda environment that contains all dependencies with ::
 
