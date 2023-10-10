@@ -7,7 +7,7 @@ The different modules are described in this section.
 functions.py
 ---------------
 
-.. automodule:: ../../modules.functions
+.. automodule:: modules.functions
    :members:
 
 

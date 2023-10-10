@@ -16,12 +16,12 @@
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here.
-# import pathlib
-# import sys
-# import os
-# sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
-# sys.path.insert(0, '../modules')
-# sys.path.append(os.path.abspath('../../modules'))
+import pathlib
+import sys
+import os
+sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
+sys.path.insert(0, '../modules')
+sys.path.append(os.path.abspath('../../modules'))
 
 
 # -- Project information -----------------------------------------------------
