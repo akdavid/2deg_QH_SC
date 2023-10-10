@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to 2deg QH-SC's documentation!
+Welcome to 2deg_QH_SC's documentation!
 ======================================
 
 Documentation of the code used in the paper “Geometrical effects on the downstream conductance in quantum-Hall--superconductor hybrid systems” available on `arXiv <https://arxiv.org/abs/2210.16867>`_ and published in `Phys. Rev. B <https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.125416>`_. The code is available in a `Github Repository <https://github.com/akdavid/2deg_QH_SC/>`_.
