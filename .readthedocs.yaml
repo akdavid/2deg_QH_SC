@@ -13,3 +13,8 @@ build:
 # Build documentation in the "doc/" directory with Sphinx
 sphinx:
   configuration: documentation/doc/conf.py
+
+# Explicitly set the version of Python and its requirements
+python:
+  install:
+    - requirements: documentation/doc/requirements.txt
