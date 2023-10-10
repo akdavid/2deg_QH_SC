@@ -1,12 +1,12 @@
 """Definition of the functions required for the calculations."""
-"""
+
 import numpy as np
 from .pauli import sigma_0, sigma_1, sigma_3
 import scipy.special as special
 from scipy.integrate import quad
 from scipy.misc import derivative
 import scipy.optimize as opt
-"""
+
 
 ##################################################
 # Microscopic model
