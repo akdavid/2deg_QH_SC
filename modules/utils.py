@@ -1,5 +1,5 @@
 """Definitions of the functions used in *calculations.py*."""
-
+"""
 import kwant
 import numpy as np
 # from .functions import onsite, onsite_qh, onsite_sc, hopping, hopping_qh, hopping_qh_e, hopping_sc
@@ -16,7 +16,7 @@ from scipy.optimize import minimize
 import scipy.optimize as opt
 import itertools
 from alive_progress import alive_bar
-
+"""
 ##################################################
 # Visualization
 ##################################################

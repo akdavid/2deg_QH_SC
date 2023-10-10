@@ -3,6 +3,7 @@
 To re-compute the data use the option from_data=False in the plot functions.
 Due to the option fig_name the plots are saved in the ‘figures‘ directory.
 """
+"""
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from modules import system, functions, utils
@@ -13,7 +14,7 @@ mpl.rcParams['font.family'] = 'Times New Roman'
 plt.rcParams['font.size'] = 21
 plt.rcParams['axes.linewidth'] = 1.5
 plt.rcParams['lines.linewidth'] = 2
-
+"""
 params = dict(a=1, t=1, mu_qh=0.05, mu_sc=0.05, delta=0.005, nu=2., Z=0.)
 
 
