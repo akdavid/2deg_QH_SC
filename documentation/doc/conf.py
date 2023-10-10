@@ -26,12 +26,12 @@ sys.path.append(os.path.abspath('../../modules'))
 
 # -- Project information -----------------------------------------------------
 
-project = '2deg_QH-SC'
+project = '2deg_QH_SC'
 copyright = '2022, A. David, J. S. Meyer, M. Houzet'
 author = 'A. David, J. S. Meyer, M. Houzet'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '3.0'
 
 
 # -- General configuration ---------------------------------------------------
