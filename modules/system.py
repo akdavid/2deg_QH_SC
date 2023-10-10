@@ -1,10 +1,10 @@
 """Classes constructing different Kwant's systems.
 """
-"""
+
 import kwant
 import numpy as np
 from .pauli import sigma_2, sigma_3
-"""
+
 
 class DeviceSingleCorner:
     """Construct a semi-infinite junction with a single corner.

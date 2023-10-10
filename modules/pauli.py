@@ -1,6 +1,5 @@
-"""
 import tinyarray
-"""
+
 # Pauli matrices for electron-hole degrees of freedom
 sigma_0 = tinyarray.array([[1, 0], [0, 1]])
 sigma_1 = tinyarray.array([[0, 1], [1, 0]])
